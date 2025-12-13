@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { CheckCircle2, ArrowRight, ShieldCheck, Users, Wallet, Check } from "lucide-react";
+import { CheckCircle2, ArrowRight, ShieldCheck, Users, Wallet, Check, Calendar, AlertTriangle, Quote } from "lucide-react";
 
 export default function LandingPage() {
   return (
@@ -16,8 +16,8 @@ export default function LandingPage() {
             <Link href="#plans" className="text-sm font-medium text-gray-600 hover:text-blue-600 transition">
               Plans & Pricing
             </Link>
-            <Link href="#why-us" className="text-sm font-medium text-gray-600 hover:text-blue-600 transition">
-              Why Save With Us
+            <Link href="#rules" className="text-sm font-medium text-gray-600 hover:text-blue-600 transition">
+              Rules
             </Link>
             <Link href="#contact" className="text-sm font-medium text-gray-600 hover:text-blue-600 transition">
               Contact Us
@@ -56,7 +56,7 @@ export default function LandingPage() {
             </span>
           </h1>
           <p className="text-lg md:text-xl text-gray-100 mb-10 font-light max-w-2xl mx-auto leading-relaxed">
-            Join thousands of traders, mechanics, and professionals who trust us to manage their daily contributions and lump-sum payouts.
+            Join thousands of traders, mechanics, and professionals who trust us to manage their daily contributions.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
@@ -95,7 +95,7 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* 4. WHO IS THIS FOR? (The 4 Categories) */}
+      {/* 4. WHO IS THIS FOR? */}
       <section className="py-24 bg-slate-50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="mb-12 text-center">
@@ -108,7 +108,6 @@ export default function LandingPage() {
               { 
                 title: "The Trader", 
                 desc: "Save daily from your sales. Collect a lump sum to restock your shop and expand inventory.",
-                // UPDATED IMAGE LINK BELOW
                 img: "https://images.unsplash.com/photo-1534778356534-d3d45b6df1da?q=80&w=900&auto=format&fit=crop"
               },
               { 
@@ -152,7 +151,7 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* 5. NEW: CONTRIBUTION PLANS (Prices Section) */}
+      {/* 5. CONTRIBUTION PLANS */}
       <section id="plans" className="py-24 bg-white scroll-mt-20">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
@@ -161,8 +160,7 @@ export default function LandingPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            
-            {/* PLAN 1: DAILY STARTER */}
+            {/* PLAN 1 */}
             <div className="border border-gray-200 rounded-2xl p-8 hover:border-blue-500 hover:shadow-xl transition relative bg-gray-50">
               <h3 className="text-xl font-bold text-gray-900">Daily Starter</h3>
               <p className="text-gray-500 text-sm mt-2">Perfect for daily earners</p>
@@ -171,7 +169,7 @@ export default function LandingPage() {
                 <span className="text-gray-500"> / day</span>
               </div>
               <ul className="space-y-4 mb-8">
-                {['Daily automated deduction', 'Standard support', 'Monthly payout option'].map((feat, i) => (
+                {['Daily automated deduction', 'Standard support'].map((feat, i) => (
                   <li key={i} className="flex items-center gap-3 text-sm text-gray-700">
                     <Check className="w-5 h-5 text-emerald-500 flex-shrink-0" />
                     {feat}
@@ -183,7 +181,7 @@ export default function LandingPage() {
               </Link>
             </div>
 
-            {/* PLAN 2: BUSINESS PRO (Highlighted) */}
+            {/* PLAN 2 - PRO */}
             <div className="border-2 border-blue-600 rounded-2xl p-8 shadow-2xl relative bg-white transform md:-translate-y-4">
               <div className="absolute top-0 right-0 bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-bl-xl rounded-tr-xl">
                 MOST POPULAR
@@ -195,7 +193,7 @@ export default function LandingPage() {
                 <span className="text-gray-500"> / day</span>
               </div>
               <ul className="space-y-4 mb-8">
-                {['Priority payout slot', 'Dedicated account manager', 'Weekly performance report', 'Emergency withdrawal access'].map((feat, i) => (
+                {['Priority payout slot','Dedicated account manager', 'Weekly performance report'].map((feat, i) => (
                   <li key={i} className="flex items-center gap-3 text-sm text-gray-700">
                     <Check className="w-5 h-5 text-blue-600 flex-shrink-0" />
                     {feat}
@@ -207,16 +205,16 @@ export default function LandingPage() {
               </Link>
             </div>
 
-            {/* PLAN 3: WEEKLY SAVER */}
+            {/* PLAN 3 */}
             <div className="border border-gray-200 rounded-2xl p-8 hover:border-blue-500 hover:shadow-xl transition relative bg-gray-50">
               <h3 className="text-xl font-bold text-gray-900">Daily</h3>
               <p className="text-gray-500 text-sm mt-2">For salary earners</p>
               <div className="my-6">
                 <span className="text-4xl font-bold text-slate-900">₦3,000</span>
-                <span className="text-gray-500"> / week</span>
+                <span className="text-gray-500"> / Day</span>
               </div>
               <ul className="space-y-4 mb-8">
-                {['One-time weekly deduction', 'Investment advisory', 'Quarterly lump sum payout'].map((feat, i) => (
+                {['One-time Yearly deduction', 'Investment advisory'].map((feat, i) => (
                   <li key={i} className="flex items-center gap-3 text-sm text-gray-700">
                     <Check className="w-5 h-5 text-emerald-500 flex-shrink-0" />
                     {feat}
@@ -227,46 +225,89 @@ export default function LandingPage() {
                 Start Saving
               </Link>
             </div>
-
           </div>
         </div>
       </section>
 
-      {/* 6. RULES & REGULATIONS */}
-      <section className="py-24 bg-slate-900 text-white relative overflow-hidden">
-        {/* Decorative elements */}
-        <div className="absolute top-0 right-0 w-96 h-96 bg-blue-600 rounded-full opacity-10 blur-3xl transform translate-x-1/2 -translate-y-1/2"></div>
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-emerald-500 rounded-full opacity-10 blur-3xl transform -translate-x-1/2 translate-y-1/2"></div>
+      {/* 6. RULES & WELCOME SECTION */}
+      <section id="rules" className="py-24 bg-slate-900 text-white relative overflow-hidden scroll-mt-20">
+        
+        {/* Background Gradients */}
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-600 rounded-full opacity-10 blur-[100px] transform translate-x-1/2 -translate-y-1/2"></div>
+        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-emerald-500 rounded-full opacity-10 blur-[100px] transform -translate-x-1/2 translate-y-1/2"></div>
 
-        <div className="max-w-5xl mx-auto px-6 relative z-10">
-          <h2 className="text-3xl font-bold mb-10 flex items-center gap-4 text-white">
-            <ShieldCheck className="text-emerald-400 w-10 h-10" /> 
-            <span>Platform Rules & Guidelines</span>
+        <div className="max-w-4xl mx-auto px-6 relative z-10">
+          
+          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-white">
+            Welcome & Guidelines
           </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
-            {[
-              "Members must deposit funds by the specified due date to maintain group integrity.",
-              "Withdrawals are strictly processed on the scheduled payout rotation dates.",
-              "All members must upload valid identification before joining a contribution cycle.",
-              "Respect for group administrators and fellow members is mandatory at all times.",
-              "Proof of payment receipts must be uploaded to the dashboard immediately.",
-              "Accounts inactive for more than 3 months without notice will be suspended."
-            ].map((rule, i) => (
-              <div key={i} className="flex gap-4 p-4 rounded-xl hover:bg-white/5 transition">
-                <span className="flex-shrink-0 w-8 h-8 flex items-center justify-center bg-blue-600 rounded-full text-sm font-bold text-white shadow-lg shadow-blue-600/50">
-                  {i + 1}
-                </span>
-                <p className="text-gray-300 text-sm leading-relaxed pt-1">{rule}</p>
-              </div>
-            ))}
+          {/* WELCOME NOTE */}
+          <div className="bg-white/5 border border-white/10 rounded-2xl p-8 md:p-10 mb-10 backdrop-blur-sm">
+            <Quote className="text-blue-400 w-10 h-10 mb-4 opacity-50" />
+            <p className="text-lg md:text-xl text-gray-200 leading-relaxed font-light italic">
+              "Okay first I really want to applaud everyone who has taken a bold step to join this saving challenge. 
+              Soon those trickles of notes you drop here would turn to a big fountain! 
+              So welcome once again, and be rest assured your finances are super safe."
+            </p>
           </div>
 
-          <div className="mt-12 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
-              <p className="text-sm text-gray-400">By creating an account, you agree to abide by these rules.</p>
-              <Link href="/signup" className="text-slate-900 bg-emerald-400 hover:bg-emerald-300 px-8 py-3 rounded-full text-sm font-bold transition shadow-lg shadow-emerald-400/20">
-                I Agree, Get Started
-              </Link>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            
+            {/* TIMELINE CARD */}
+            <div className="bg-gradient-to-br from-emerald-900/40 to-slate-800 border border-emerald-500/30 rounded-2xl p-8">
+              <div className="flex items-center gap-3 mb-6">
+                <Calendar className="text-emerald-400 w-6 h-6" />
+                <h3 className="text-xl font-bold text-white">Savings Duration</h3>
+              </div>
+              <div className="space-y-4">
+                <div className="flex justify-between items-center border-b border-white/10 pb-3">
+                  <span className="text-gray-400">Start Date</span>
+                  <span className="font-bold text-emerald-300">1st Jan 2025</span>
+                </div>
+                <div className="flex justify-between items-center border-b border-white/10 pb-3">
+                  <span className="text-gray-400">End Date</span>
+                  <span className="font-bold text-emerald-300">17th Dec 2025</span>
+                </div>
+                <div className="pt-2">
+                  <p className="text-3xl font-bold text-white">351 <span className="text-sm font-normal text-gray-400">Total Days</span></p>
+                </div>
+              </div>
+            </div>
+
+            {/* DEFAULT POLICY CARD */}
+            <div className="bg-gradient-to-br from-red-900/20 to-slate-800 border border-red-500/30 rounded-2xl p-8">
+              <div className="flex items-center gap-3 mb-4">
+                <AlertTriangle className="text-red-400 w-6 h-6" />
+                <h3 className="text-xl font-bold text-white">Default Policy</h3>
+              </div>
+              <p className="text-gray-300 text-sm mb-6 leading-relaxed">
+                To maintain a great approach to payment timing, a <strong>Total Refund</strong> is triggered if a client defaults up to 3 times.
+              </p>
+              
+              <div className="space-y-3">
+                <div className="bg-slate-900/50 p-3 rounded-lg flex justify-between items-center">
+                  <span className="text-xs text-gray-400 uppercase tracking-wide">If contribution is</span>
+                  <span className="text-xs text-gray-400 uppercase tracking-wide">Penalty</span>
+                </div>
+                
+                <div className="flex justify-between items-center p-2">
+                  <span className="text-gray-200 text-sm">Below 50% of Total</span>
+                  <span className="font-bold text-red-400 bg-red-400/10 px-3 py-1 rounded">10% Refunded</span>
+                </div>
+
+                <div className="flex justify-between items-center p-2 border-t border-white/5">
+                  <span className="text-gray-200 text-sm">Above 50% of Total</span>
+                  <span className="font-bold text-orange-400 bg-orange-400/10 px-3 py-1 rounded">5% Refunded</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-12 text-center">
+             <Link href="/signup" className="inline-flex items-center justify-center bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full font-bold transition shadow-lg shadow-blue-600/30">
+               Accept Rules & Join Challenge
+             </Link>
           </div>
         </div>
       </section>
@@ -285,7 +326,7 @@ export default function LandingPage() {
             <ul className="space-y-4 text-sm text-gray-600">
               <li><Link href="#" className="hover:text-blue-600">Home</Link></li>
               <li><Link href="#plans" className="hover:text-blue-600">Pricing Plans</Link></li>
-              <li><Link href="#why-us" className="hover:text-blue-600">Why Save With Us</Link></li>
+              <li><Link href="#rules" className="hover:text-blue-600">Rules</Link></li>
             </ul>
           </div>
           <div>
