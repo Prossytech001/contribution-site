@@ -6,20 +6,20 @@ export default function LandingPage() {
     <div className="min-h-screen bg-gray-50 font-sans text-gray-900">
       
       {/* 1. FIXED NAVBAR */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100 shadow-sm transition-all">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-black/9 backdrop-blur-sm border-b border-gray-100 shadow-sm transition-all">
         <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-          <h1 className="text-xl md:text-2xl font-bold text-slate-900 tracking-tight">
-            Money Contribution
+          <h1 className="text-xl text-black/95 md:text-2xl font-bold text-slate-900 tracking-tight">
+           ĐǻΖΉ
           </h1>
           
           <div className="hidden md:flex items-center space-x-8">
-            <Link href="#plans" className="text-sm font-medium text-gray-600 hover:text-blue-600 transition">
+            <Link href="#plans" className="text-sm font-medium text-black-600 hover:text-blue-600 transition">
               Plans & Pricing
             </Link>
-            <Link href="#rules" className="text-sm font-medium text-gray-600 hover:text-blue-600 transition">
+            <Link href="#rules" className="text-sm font-medium text-black-600 hover:text-blue-600 transition">
               Rules
             </Link>
-            <Link href="#contact" className="text-sm font-medium text-gray-600 hover:text-blue-600 transition">
+            <Link href="#contact" className="text-sm font-medium text-black-600 hover:text-blue-600 transition">
               Contact Us
             </Link>
           </div>
@@ -316,7 +316,7 @@ export default function LandingPage() {
       <footer id="contact" className="bg-gray-50 border-t border-gray-200 py-16 scroll-mt-20">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12">
           <div className="col-span-1 md:col-span-2">
-            <h2 className="text-2xl font-bold text-slate-900 mb-6">Money Contribution</h2>
+            <h2 className="text-2xl font-bold text-slate-900 mb-6">ĐǻΖΉ</h2>
             <p className="text-gray-500 max-w-sm leading-relaxed mb-6">
               The safest way to save with your community. Transparent, automated, and designed for your financial growth.
             </p>
@@ -332,14 +332,14 @@ export default function LandingPage() {
           <div>
             <h3 className="font-bold text-slate-900 mb-6 text-lg">Contact Us</h3>
             <ul className="space-y-4 text-sm text-gray-600">
-              <li>support@moneycontribution.com</li>
-              <li>+234 800 123 4567</li>
+              <li>support@ĐǻΖΉ.com</li>
+              <li><a href="tel:08001234567">+234 800 123 4567</a> </li>
               <li>Lagos, Nigeria</li>
             </ul>
           </div>
         </div>
         <div className="max-w-7xl mx-auto px-6 mt-16 pt-8 border-t border-gray-200 text-center text-sm text-gray-400">
-          &copy; {new Date().getFullYear()} Money Contribution App. All rights reserved.
+          &copy; {new Date().getFullYear()} ĐǻΖΉ App. All rights reserved.
         </div>
       </footer>
     </div>
